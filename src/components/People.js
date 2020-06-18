@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import Search from './Search';
 import "../App.css";
 
-function People () {
+function People() {
+  const [loading, setLoading] = useState(true);
   const [data, setData] = useState([]);
   const [people, setPeople] = useState([]);
   const [query, setQuery] = useState(1);
@@ -18,11 +20,19 @@ function People () {
     fetchData();
   }, [query]);
 
+  // https://swapi.dev/api/people/?search=r2
 
+
+  const search = searchValue => {
+    setLoading(true)
+    fetch(`https://swapi.dev/api/people/?search=${searchValue}`)
+      .then(res => res.json())
+      .then(data=>setPeople(data.results))
+  }
 
   return (
     <>
-    
+      <Search search={search}/>
       <ul>
         {people.map(item => (
           <li key={item.name}>{item.name}</li>

@@ -30,7 +30,6 @@ function App() {
               <li> <Link to="/">People</Link> </li>
               <li>  <Link to="/planets">Planets</Link></li>
               <li>  <Link to="/starships">StarShips</Link></li>
-              <li>  <Link to="/search">searchGalaxy</Link></li>
 
           </ul>
         </div>
@@ -44,10 +43,7 @@ function App() {
           <Route path="/planets">
             <Planets />
           </Route>
-          <Route path="/search">
-            <SearchGalaxy entity={entity} searchTerm={searchTerm} />
-          </Route>
-          <Route path="/">
+                  <Route path="/">
             <People />
           </Route>
          

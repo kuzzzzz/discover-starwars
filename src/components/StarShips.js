@@ -1,13 +1,15 @@
 import React, {useEffect,useState}from 'react'
 import axios from 'axios'
+import Search from './Search';
+
 
 export default function StarShips() {
-
+    const [loading,setLoading] = useState(true)
     const [data, setData] = useState([]);
     const [starhips, setShips] = useState([]);
     const [query, setQuery] = useState(1);
 
-    console.log(data)
+    // console.log(data)
     useEffect(() => {
         const fetchData = async () => {
             const res = await axios.get(
@@ -20,10 +22,19 @@ export default function StarShips() {
     }, [query]);
 
 
+    // https://swapi.dev/api/people/?search=r2
+
+
+    const search = searchValue => {
+        setLoading(true)
+        fetch(`https://swapi.dev/api/starships/?search=${searchValue}`)
+            .then(res => res.json())
+            .then(data => setShips(data.results))
+    }
 
     return (
         <>
-
+<Search search={search}/>
             <ul>
                 {starhips.map(item => (
                     <li key={item.name}>{item.name}</li>

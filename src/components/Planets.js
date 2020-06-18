@@ -1,8 +1,9 @@
 import React,{useEffect,useState} from 'react';
 import axios from 'axios'
+import Search from './Search'
 
 export default function Planets() {
-
+    const [loading,setLoading] =useState(true)
     const [data, setData] = useState([]);
     const [planets, setPlanets] = useState([]);
     const [query, setQuery] = useState(1);
@@ -19,10 +20,17 @@ export default function Planets() {
     }, [query]);
 
 // console.log(data)
+    const search = searchValue => {
+        setLoading(true)
+        fetch(`https://swapi.dev/api/planets/?search=${searchValue}`)
+            .then(res => res.json())
+            .then(data => setPlanets(data.results))
+    }
+
 
     return (
         <>
-
+<Search search={search}/>
             <ul>
                 {planets.map(item => (
                     <li key={item.name}>{item.name}</li>
