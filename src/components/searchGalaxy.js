@@ -24,7 +24,7 @@ function SearchGalaxy({entity,searchTerm}) {
 
     fetchData();
   }, [url]);
-  console.log(data);
+  // console.log(data);
   return (
     <>
       <input
