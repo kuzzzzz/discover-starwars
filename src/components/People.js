@@ -18,9 +18,7 @@ function People () {
     fetchData();
   }, [query]);
 
-  console.log(data);
-  console.log(people);
-  console.log(query);
+
 
   return (
     <>
