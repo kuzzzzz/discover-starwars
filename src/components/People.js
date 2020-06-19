@@ -1,10 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect,useRef } from "react";
 import axios from "axios";
 import Search from './Search';
+import Filter from './filter';
 import "../App.css";
 
 function People() {
   const [loading, setLoading] = useState(true);
+  const filterd= useRef([])
   const [data, setData] = useState([]);
   const [people, setPeople] = useState([]);
   const [query, setQuery] = useState(1);
@@ -19,7 +21,7 @@ function People() {
     };
     fetchData();
   }, [query]);
-
+console.log(data)
   // https://swapi.dev/api/people/?search=r2
 
 
@@ -27,12 +29,32 @@ function People() {
     setLoading(true)
     fetch(`https://swapi.dev/api/people/?search=${searchValue}`)
       .then(res => res.json())
-      .then(data=>setPeople(data.results))
+      .then(data => setPeople(data.results))
   }
+
+
+
+  
+const fileter = filterValue => {
+  let men=[];
+  people.filter(item=>{
+    if(item.gender===filterValue){
+      men.push(item)
+    }
+  })
+filterd.current = men
+  setPeople(filterd.current)
+  // console.log(filterd)
+}
+
+  
+ 
 
   return (
     <>
-      <Search search={search}/>
+      
+      <Search search={search} />
+      <Filter fileter={fileter} />
       <ul>
         {people.map(item => (
           <li key={item.name}>{item.name}</li>
