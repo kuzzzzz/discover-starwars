@@ -27,6 +27,7 @@ export default function Filter(props) {
                     <option value="female">Female</option>
                     <option value="n/a">Robot</option>
                     <option value="none">Alien</option>
+                    <option value="hermaphrodite">Hemaphrodite</option>
 
                 </select>
                 <input onClick={callFilterFunction} type="submit" value="Submit" />

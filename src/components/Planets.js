@@ -1,6 +1,7 @@
 import React,{useEffect,useState} from 'react';
 import axios from 'axios'
 import Search from './Search'
+import DisplayPlanet from './DisplayPlanet'
 
 export default function Planets() {
     const [loading,setLoading] =useState(true)
@@ -33,7 +34,17 @@ export default function Planets() {
 <Search search={search}/>
             <ul>
                 {planets.map(item => (
-                    <li key={item.name}>{item.name}</li>
+                    <DisplayPlanet 
+                    key={item.name}
+                    name={item.name}
+                    climate={item.climate}
+                    population={item.population}
+                    rotation_period={item.rotation_period}
+                    surface_water={item.surface_water}
+                    terrain={item.terrain}
+                    orbital_period={item.orbital_period}
+                    films={item.films.length}
+                    />
                 ))}
             </ul>
             <button

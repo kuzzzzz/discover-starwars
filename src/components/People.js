@@ -1,12 +1,13 @@
-import React, { useState, useEffect,useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import Search from './Search';
 import Filter from './filter';
+import DisplayPerson from './DisplayPerson';
 import "../App.css";
 
 function People() {
   const [loading, setLoading] = useState(true);
-  const filterd= useRef([])
+  const filterd = useRef([])
   const [data, setData] = useState([]);
   const [people, setPeople] = useState([]);
   const [query, setQuery] = useState(1);
@@ -21,7 +22,7 @@ function People() {
     };
     fetchData();
   }, [query]);
-console.log(data)
+  console.log(data)
   // https://swapi.dev/api/people/?search=r2
 
 
@@ -32,32 +33,37 @@ console.log(data)
       .then(data => setPeople(data.results))
   }
 
-
-
-  
-const fileter = filterValue => {
-  let men=[];
-  people.filter(item=>{
-    if(item.gender===filterValue){
-      men.push(item)
-    }
-  })
-filterd.current = men
-  setPeople(filterd.current)
-  // console.log(filterd)
-}
-
-  
- 
+  const fileter = filterValue => {
+    let men = [];
+    people.filter(item => {
+      if (item.gender === filterValue) {
+        men.push(item)
+      }
+    })
+    filterd.current = men
+    setPeople(filterd.current)
+    // console.log(filterd)
+  }
 
   return (
     <>
-      
+
       <Search search={search} />
       <Filter fileter={fileter} />
       <ul>
         {people.map(item => (
-          <li key={item.name}>{item.name}</li>
+          <DisplayPerson
+            key={item.name}
+            name={item.name}
+            birth_year={item.birth_year}
+            gender={item.gender}
+            eye_color={item.eye_color}
+            hair_color={item.hair_color}
+            skin_color={item.skin_color}
+            mass={item.mass}
+            films={item.films.length}
+            height={item.height}
+          />
         ))}
       </ul>
       <button

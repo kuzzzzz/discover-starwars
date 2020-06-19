@@ -3,7 +3,6 @@ import axios from "axios";
 import People from "./components/People";
 import Planets from "./components/Planets";
 import StarShips from './components/StarShips';
-import SearchGalaxy from "./components/searchGalaxy";
 import "./App.css";
 import {
   BrowserRouter as Router,
@@ -13,27 +12,22 @@ import {
 } from "react-router-dom";
 
 function App() {
-  const entities = ["people", "starships", "planets"];
-  const defaultSearchKeywords = ['luke','star','Hoth']
-  const [isSearched, setState] = useState(false);
 
-  const [searchTerm, setSearchTerm] = useState(undefined);
-  const [entity, setEntity] = useState(entities[1]);
 
   return (
     <>
-    <Router>
-      <div className="topnav">
-        <div className="Logo"></div>
-        <div className="nav">
-          <ul>
-              <li> <Link to="/">People</Link> </li>
-              <li>  <Link to="/planets">Planets</Link></li>
-              <li>  <Link to="/starships">StarShips</Link></li>
+      <Router>
+        <div className="topnav">
+          <div className="Logo"></div>
+          <div className="nav">
+            <ul>
+              <li><Link to="/">People</Link> </li>
+              <li><Link to="/planets">Planets</Link></li>
+              <li><Link to="/starships">StarShips</Link></li>
 
-          </ul>
+            </ul>
+          </div>
         </div>
-      </div>
 
 
         <Switch>
@@ -43,10 +37,10 @@ function App() {
           <Route path="/planets">
             <Planets />
           </Route>
-                  <Route path="/">
+          <Route path="/">
             <People />
           </Route>
-         
+
         </Switch>
       </Router>
     </>

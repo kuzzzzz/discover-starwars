@@ -1,6 +1,7 @@
 import React, {useEffect,useState}from 'react'
 import axios from 'axios'
 import Search from './Search';
+import DisplayStarShip from './DisplayStarShip'
 
 
 export default function StarShips() {
@@ -37,7 +38,17 @@ export default function StarShips() {
 <Search search={search}/>
             <ul>
                 {starhips.map(item => (
-                    <li key={item.name}>{item.name}</li>
+                    <DisplayStarShip
+                     key={item.name}
+                     name={item.name}
+                     manufacturer={item.name}
+                     cost_in_credits={item.cost_in_credits}
+                     cargo_capacity={item.cargo_capacity}
+                     hyperdrive_rating={item.hyperdrive_rating}
+                     crew={item.crew}
+                     passengers={item.passengers}
+                     films={item.films.length}
+                    />
                 ))}
             </ul>
             <button
