@@ -2,7 +2,10 @@
   font-family: starwars;
   src: url(./assets/fonts/Starjedi.ttf);
 }
-
+@font-face{
+  font-family: starjhol;
+  src:url(./assets/fonts/Starjhol.ttf)
+}
 .topnav{
   background:black;
   display: flex;
@@ -10,24 +13,59 @@
   align-items: center;
 }
 div .Logo {
- background: url('./assets/img/logo.png') no-repeat center;
-  background-size: 120px;
+     font-family: starjhol;
+     text-align: center;
+  letter-spacing: 2px;
+
   width: 120px;
   height: 90px;
     /* border: 2px solid; */
-  color: pink;
+  color:yellow;
 
    }
 ul{
   display: flex;
-font-family: starwars;
+font-family: starjhol;
+  letter-spacing: 2px;
+
 color: yellow;
 }
-li{
+li,a {
   margin: 10px;
   list-style: none;
 }
+a:link{
+  color: blue;
+}
+
+a:hover{
+  text-decoration: none;
+  color: yellow;
+}
+a:active{
+  color: yellow;
+}
    .Logo img {
-     width: 20px;
-     height: 20px;
+     width: 120px;
+     height: 70px;
+   }
+   div .button{
+     display: flex;
+     justify-content: space-around;
+    
+   }
+   .previousButton button{
+     font-family: starwars;
+
+        background: chartreuse;
+     width:fit-content;
+     color:blue;
+     padding: 10px;
+   }
+   .nextButton button{
+     font-family: starwars;
+
+     background: blueviolet;
+          padding: 10px;
+
    }

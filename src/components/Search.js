@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import "../styles/card.scss"
 
 export default function Search({search}) {
 const [searchValue, setSearchValue] = useState('');
@@ -16,7 +17,7 @@ const [searchValue, setSearchValue] = useState('');
         resetInputField();
     }
     return (
-        <div>
+        <div className="contact-card">
             <form>
                 <input
                 value={searchValue}

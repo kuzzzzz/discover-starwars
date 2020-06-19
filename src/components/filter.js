@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import "../styles/card.scss"
 
 export default function Filter(props) {
     const [FilterValue, setFilterValue] = useState('');
@@ -20,7 +21,7 @@ export default function Filter(props) {
 
     }
     return (
-        <div>
+        <div className="contact-card">
             <form>
                 <select  name="gender" id="gender" onChange={handlefilterInput} >
                     <option value="male"> Male</option>

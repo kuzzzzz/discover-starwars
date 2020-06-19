@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import "../App.scss"
+import "../styles/card.scss"
 
 
 export default function DisplayCard({
@@ -11,21 +12,21 @@ export default function DisplayCard({
 
     return (
 
-        <div>
-            <div className="contact-card">
-                <p>{name}</p>
-                <p>{birth_year}</p>
-                <p>{gender}</p>
+        <div className="contact-card">
+            <div >
+                <p>Name:{name}</p>
+                <p>Birth-Year:{birth_year}</p>
+                <p>Gender:{gender}</p>
 
             </div>
             <button onClick={() => setDetails(!fulldetails)} >full-details</button>
-            {fulldetails && <p>
-                eye:{eye_color}
-                mass:{mass}
-                skin:{skin_color}
-                No of Movies:{films}
-                hair:{hair_color}
-                height:{height}</p>}
+            {fulldetails && <div><p>
+                Eye-color:{eye_color}<br/>
+                Mass:{mass}<br />
+                Skin:{skin_color}<br />
+                No of Movies Seen:{films}<br />
+                Hair-Color:{hair_color}<br />
+                Height:{height}</p></div>}
 
         </div>
 

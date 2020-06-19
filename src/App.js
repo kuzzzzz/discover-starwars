@@ -3,6 +3,7 @@ import axios from "axios";
 import People from "./components/People";
 import Planets from "./components/Planets";
 import StarShips from './components/StarShips';
+import logo from './assets/img/logo.png'
 import "./App.scss";
 import {
   BrowserRouter as Router,
@@ -18,7 +19,12 @@ function App() {
     <>
       <Router>
         <div className="topnav">
-          <div className="Logo"></div>
+          <div className="Logo">
+            discover
+         <Link to='/'> 
+          <img src={logo}></img>
+            </Link>
+          </div>
           <div className="nav">
             <ul>
               <li><Link to="/">People</Link> </li>

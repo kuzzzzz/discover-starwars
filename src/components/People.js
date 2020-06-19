@@ -50,7 +50,7 @@ function People() {
 
       <Search search={search} />
       <Filter fileter={fileter} />
-      <ul>
+      
         {people.map(item => (
           <DisplayPerson
             key={item.name}
@@ -65,7 +65,8 @@ function People() {
             height={item.height}
           />
         ))}
-      </ul>
+      <div className="button">
+     <div className="previousButton">
       <button
         type="text"
         value={query}
@@ -77,6 +78,8 @@ function People() {
       >
         Previous
       </button>
+      </div>
+      <div className="nextButton">
       <button
         type="text"
         value={query}
@@ -88,6 +91,8 @@ function People() {
       >
         Next
       </button>
+        </div>
+      </div>
     </>
   );
 }

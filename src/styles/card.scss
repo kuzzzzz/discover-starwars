@@ -1,0 +1,48 @@
+@import '../App.scss';
+
+$layout-breakpoint-small:768px;
+
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  color: rgb(224, 224, 40);
+  background-color: rgb(35, 38, 44);
+  font-family: starwars;
+  box-shadow: 10px 10px 25px -16px rgba(0, 0, 0, 0.75);
+  border-radius: 10px;
+  max-width: 300px;
+  /* max-height: 125px; */
+  margin: 20px auto;
+  word-spacing: normal;
+  letter-spacing: 2px;
+  text-transform: lowercase;
+  
+}
+
+.contact-card p {
+  margin-left: 10px;
+  margin-top: 0;
+}
+
+button {
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
+img {
+  border-radius: 10px;
+  margin-bottom: 5px;
+  width: 120px;
+  height: 120px;
+}
+
+@media only screen and (min-width: $layout-breakpoint-small ) {
+  .contact-card {
+    flex-direction: row;
+    max-width: 500px;
+    max-height: 125px;
+    margin: 20px auto;
+  }
+}
