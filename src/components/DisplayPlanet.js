@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import "../App.css"
+import "../App.scss"
 
 export default function DisplayPlanet({
     name, population, climate, rotation_period,

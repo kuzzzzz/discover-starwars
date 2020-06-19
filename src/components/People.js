@@ -3,7 +3,7 @@ import axios from "axios";
 import Search from './Search';
 import Filter from './filter';
 import DisplayPerson from './DisplayPerson';
-import "../App.css";
+import "../App.scss";
 
 function People() {
   const [loading, setLoading] = useState(true);

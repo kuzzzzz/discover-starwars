@@ -3,7 +3,7 @@ import axios from "axios";
 import People from "./components/People";
 import Planets from "./components/Planets";
 import StarShips from './components/StarShips';
-import "./App.css";
+import "./App.scss";
 import {
   BrowserRouter as Router,
   Switch,

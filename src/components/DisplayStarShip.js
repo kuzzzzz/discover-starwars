@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import '../App.css'
+import '../App.scss'
 export default function DisplayStarShip({
         name,manufacturer,cost_in_credits,cargo_capacity,
         hyperdrive_rating,crew,passengers,films
