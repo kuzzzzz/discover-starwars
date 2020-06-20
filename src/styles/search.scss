@@ -1,37 +1,40 @@
-@import '../App.scss';@import '../App.scss';
+@import '../App.scss';
 
 $layout-breakpoint-small:768px;
 
-.contact-card {
+
+
+.search {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-  padding: 10px;
-  color: #ffffff;
-  background-color: rgb(93, 121, 197);
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  box-shadow: 10px 10px 25px -16px rgba(0, 0, 0, 0.75);
-  border-radius: 10px;
-  max-width: 300px;
-  /* max-height: 125px; */
-  margin: 20px auto;
+  margin-top: 10px;
+  font-family: starwars;
+  letter-spacing: 2px;
 }
 
-.contact-card p {
-  margin-left: 10px;
-  margin-top: 0;
+
+input[type="submit"] {
+  padding: 5px;
+  background-color: yellow;
+  color: black;
+  border: 1px solid black;
+  width: 80px;
+  margin-left: 5px;
+  cursor: pointer;
 }
 
-button {
-  margin-left: 10px;
-  margin-bottom: 5px;
+
+input[type="submit"]:hover {
+  background: rgb(12, 1, 1);
+  color: rgb(235, 143, 23);
 }
-img {
-  border-radius: 10px;
-  margin-bottom: 5px;
-  width: 120px;
-  height: 120px;
+
+
+.search > input[type="text"]{
+  width: 40%;
+  min-width: 170px;
 }
 
 @media only screen and (min-width: $layout-breakpoint-small ) {

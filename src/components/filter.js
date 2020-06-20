@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import "../styles/card.scss"
+import "../styles/search.scss"
 
 export default function Filter(props) {
     const [FilterValue, setFilterValue] = useState('');
@@ -21,8 +21,8 @@ export default function Filter(props) {
 
     }
     return (
-        <div className="contact-card">
-            <form>
+        
+            <form className="search">
                 <select  name="gender" id="gender" onChange={handlefilterInput} >
                     <option value="male"> Male</option>
                     <option value="female">Female</option>
@@ -31,9 +31,9 @@ export default function Filter(props) {
                     <option value="hermaphrodite">Hemaphrodite</option>
 
                 </select>
-                <input onClick={callFilterFunction} type="submit" value="Submit" />
+                <input onClick={callFilterFunction} type="submit" value="Filter" />
 
             </form>
-        </div>
+        
     )
 }

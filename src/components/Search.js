@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import "../styles/card.scss"
+import "../styles/search.scss"
 
 export default function Search({search}) {
 const [searchValue, setSearchValue] = useState('');
@@ -17,8 +17,7 @@ const [searchValue, setSearchValue] = useState('');
         resetInputField();
     }
     return (
-        <div className="contact-card">
-            <form>
+            <form className="search">
                 <input
                 value={searchValue}
                 onChange={handleSearchInputChanges}
@@ -27,6 +26,6 @@ const [searchValue, setSearchValue] = useState('');
                 />
                 <input onClick={callSearchFunction} type="submit" value="search"/>
             </form>
-        </div>
+        
     )
 }
