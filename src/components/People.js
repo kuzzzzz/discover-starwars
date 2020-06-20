@@ -89,6 +89,7 @@ function People() {
         <div className="button">
           <div className="previousButton">
             <button
+                className="btn btn-primary btn-lg"
               type="text"
               value={query}
               onClick={event => {
@@ -102,6 +103,7 @@ function People() {
           </div>
           <div className="nextButton">
             <button
+                className="btn btn-primary btn-lg"
               type="text"
               value={query}
               onClick={event => {

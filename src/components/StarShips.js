@@ -70,29 +70,36 @@ export default function StarShips() {
                         films={item.films.length}
                     />
                 ))}
-
-                <button
-                    type="text"
-                    value={query}
-                    onClick={event => {
-                        if (query > 1) {
-                            setQuery(query - 1);
-                        }
-                    }}
-                >
-                    Previous
+                <div className="button">
+                    <div className="previousButton">
+                        <button
+                            className="btn btn-primary btn-lg"
+                            type="text"
+                            value={query}
+                            onClick={event => {
+                                if (query > 1) {
+                                    setQuery(query - 1);
+                                }
+                            }}
+                        >
+                            Previous
                 </button>
-                <button
-                    type="text"
-                    value={query}
-                    onClick={event => {
-                        if (query < 4) {
-                            setQuery(query + 1);
-                        }
-                    }}
-                >
-                    Next
+                    </div>
+                    <div className="nextButton">
+                        <button
+                            className="btn btn-primary btn-lg"
+                            type="text"
+                            value={query}
+                            onClick={event => {
+                                if (query < 4) {
+                                    setQuery(query + 1);
+                                }
+                            }}
+                        >
+                            Next
                  </button>
+                    </div>
+                </div>
             </div>)}
         </>
     )

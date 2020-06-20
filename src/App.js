@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
 import People from "./components/People";
 import Planets from "./components/Planets";
 import StarShips from './components/StarShips';
@@ -14,24 +13,24 @@ import {
 
 function App() {
 
-
+ 
   return (
     <>
       <Router>
-        <div className="topnav">
+        <div className="topnav navbar sticky-top">
           <div className="Logo">
             discover
-         <Link to='/'> 
-          <img src={logo}></img>
+         <Link to='/'>
+              <img src={logo}></img>
             </Link>
           </div>
           <div className="nav">
-            <ul>
-              <li><Link to="/">People</Link> </li>
-              <li><Link to="/planets">Planets</Link></li>
-              <li><Link to="/starships">StarShips</Link></li>
+         <Link to="/">People</Link>
+            <Link to="/planets">Planets</Link>
+            <Link to="/starships">StarShips</Link>
+          
 
-            </ul>
+
           </div>
         </div>
 

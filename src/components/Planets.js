@@ -14,13 +14,13 @@ export default function Planets() {
         const fetchData = async () => {
             setIsError(false)
             setIsLoading(true)
-            try{
-            const res = await axios.get(
-                `https://swapi.dev/api/planets/?page=${query}`
-            );
-            setData(res.data);
-            setPlanets(res.data.results);
-            }catch(error){
+            try {
+                const res = await axios.get(
+                    `https://swapi.dev/api/planets/?page=${query}`
+                );
+                setData(res.data);
+                setPlanets(res.data.results);
+            } catch (error) {
                 setIsError(true)
             }
             setIsLoading(false)
@@ -67,29 +67,38 @@ export default function Planets() {
                         films={item.films.length}
                     />
                 ))}
+                <div className="button">
+                    <div className="previousButton">
+                        <button
+                            className="btn btn-primary btn-lg"
 
-                <button
-                    type="text"
-                    value={query}
-                    onClick={event => {
-                        if (query > 1) {
-                            setQuery(query - 1);
-                        }
-                    }}
-                >
-                    Previous
+                            type="text"
+                            value={query}
+                            onClick={event => {
+                                if (query > 1) {
+                                    setQuery(query - 1);
+                                }
+                            }}
+                        >
+                            Previous
       </button>
-                <button
-                    type="text"
-                    value={query}
-                    onClick={event => {
-                        if (query < 6) {
-                            setQuery(query + 1);
-                        }
-                    }}
-                >
-                    Next
+                    </div>
+                    <div className="nextButton">
+                        <button
+                            className="btn btn-primary btn-lg"
+
+                            type="text"
+                            value={query}
+                            onClick={event => {
+                                if (query < 6) {
+                                    setQuery(query + 1);
+                                }
+                            }}
+                        >
+                            Next
       </button>
+                    </div>
+                </div>
             </div>
                 )}
         </>

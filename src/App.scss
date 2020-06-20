@@ -23,16 +23,18 @@ div .Logo {
   color:yellow;
 
    }
-ul{
+.nav{
   display: flex;
+      flex-direction: column;
+
 font-family: starjhol;
   letter-spacing: 2px;
 
 color: yellow;
 }
-li,a {
-  margin: 10px;
-  list-style: none;
+.nav a {
+  font-size: 20px;
+  margin: 2px;
 }
 a:link{
   color: blue;
@@ -46,8 +48,8 @@ a:active{
   color: yellow;
 }
    .Logo img {
-     width: 120px;
-     height: 70px;
+     width: 220px;
+     height: 80px;
    }
    div .button{
      display: flex;
@@ -56,16 +58,33 @@ a:active{
    }
    .previousButton button{
      font-family: starwars;
+border: none;
 
-        background: chartreuse;
-     width:fit-content;
-     color:blue;
+     background: rgb(41, 16, 1);
+     color:rgb(255, 255, 255);
      padding: 10px;
    }
    .nextButton button {
      font-family: starwars;
-
-     background: blueviolet;
+     letter-spacing: 2px;
+border: none;
+     background: rgb(41, 16, 1);
           padding: 10px;
 
    }
+   .nextButton button:hover,.previousButton button:hover{
+     color: black;
+     background: yellow;
+   }
+  @media screen and (min-width: 780px) {
+  .nav  {
+         flex-direction: row;
+
+  font-size: 20px;
+  margin: 20px;
+   a{
+margin:10px;
+  }
+}
+
+  }
