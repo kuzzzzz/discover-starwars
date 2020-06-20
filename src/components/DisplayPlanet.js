@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import "../styles/planetcard.scss"
 import "../App.scss"
 
 export default function DisplayPlanet({
@@ -10,21 +11,27 @@ export default function DisplayPlanet({
     return (
 
 
-        <div>
-            <div className="contact-card">
-                <p>name:{name}</p>
+        <div className="planet-card container">
+            <div class="meta">
+                <div class="photo">
+
+                </div>
+            </div>
+            <div className="description">
+                <h1>name:{name}</h1>
                 <p>climate:{climate}</p>
                 <p>population:{population}</p>
 
+                <div className="readmore">
+                    <button onClick={() => setDetails(!planetdetails)} >full-details</button>
+                    {planetdetails && <p>
+                        surface-water:{surface_water}<br />
+                        terrain:{terrain}<br />
+                        No-of-Movies:{films}<br />
+                        orbital-period:{orbital_period}<br />
+                        rotation-period:{rotation_period}</p>}
+                </div>
             </div>
-            <button onClick={() => setDetails(!planetdetails)} >full-details</button>
-            {planetdetails && <p>
-                surface_water:{surface_water}
-                terrain:{terrain}
-                No of Movies:{films}
-                orbital_period:{orbital_period}
-                rotation_period:{rotation_period}</p>}
-
         </div>
 
     )

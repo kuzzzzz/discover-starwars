@@ -1,10 +1,10 @@
-import React,{useEffect,useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios'
 import Search from './Search'
 import DisplayPlanet from './DisplayPlanet'
 
 export default function Planets() {
-    const [loading,setLoading] =useState(true)
+    const [loading, setLoading] = useState(true)
     const [data, setData] = useState([]);
     const [planets, setPlanets] = useState([]);
     const [query, setQuery] = useState(1);
@@ -20,7 +20,7 @@ export default function Planets() {
         fetchData();
     }, [query]);
 
-// console.log(data)
+    // console.log(data)
     const search = searchValue => {
         setLoading(true)
         fetch(`https://swapi.dev/api/planets/?search=${searchValue}`)
@@ -31,10 +31,10 @@ export default function Planets() {
 
     return (
         <>
-<Search search={search}/>
-            <ul>
-                {planets.map(item => (
-                    <DisplayPlanet 
+            <Search search={search} />
+
+            {planets.map(item => (
+                <DisplayPlanet
                     key={item.name}
                     name={item.name}
                     climate={item.climate}
@@ -44,9 +44,9 @@ export default function Planets() {
                     terrain={item.terrain}
                     orbital_period={item.orbital_period}
                     films={item.films.length}
-                    />
-                ))}
-            </ul>
+                />
+            ))}
+
             <button
                 type="text"
                 value={query}
