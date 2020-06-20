@@ -11,22 +11,26 @@ function People() {
   const [data, setData] = useState([]);
   const [people, setPeople] = useState([]);
   const [query, setQuery] = useState(1);
+  const [isError, setIsError] = useState(false)
 
   useEffect(() => {
     const fetchData = async () => {
+      setIsError(false)
       setIsLoading(true)
-
-      const res = await axios.get(
-        `https://swapi.dev/api/people/?page=${query}`
-      );
-      setData(res.data);
-      setPeople(res.data.results);
+      try {
+        const res = await axios.get(
+          `https://swapi.dev/api/people/?page=${query}`
+        );
+        setData(res.data);
+        setPeople(res.data.results);
+      } catch (error) {
+        setIsError(true)
+      }
       setIsLoading(false)
 
     };
     fetchData();
   }, [query]);
-  console.log(data)
   // https://swapi.dev/api/people/?search=r2
 
 
@@ -58,11 +62,16 @@ function People() {
 
       <Search search={search} />
       <Filter fileter={fileter} />
+      {isError && <div className="alert alert-danger" role="alert">
+        The Repulic Won Check Your Connection and <a href="#" className="alert-link">Refresh</a>. To Rebel
+</div>}
       {isloading ? (
         <div className="search">
           <span className="Spinner Spinner--radar"></span>
         </div>
-      ):(<div>
+      ) : (<div>
+          <h1>Showing List 10 out of {data.count}</h1>
+
         {people.map(item => (
           <DisplayPerson
             key={item.name}
@@ -77,35 +86,35 @@ function People() {
             height={item.height}
           />
         ))}
-      <div className="button">
-     <div className="previousButton">
-      <button
-        type="text"
-        value={query}
-        onClick={event => {
-          if (query > 1) {
-            setQuery(query - 1);
-          }
-        }}
-      >
-        Previous
+        <div className="button">
+          <div className="previousButton">
+            <button
+              type="text"
+              value={query}
+              onClick={event => {
+                if (query > 1) {
+                  setQuery(query - 1);
+                }
+              }}
+            >
+              Previous
       </button>
-      </div>
-      <div className="nextButton">
-      <button
-        type="text"
-        value={query}
-        onClick={event => {
-          if (query < 9) {
-            setQuery(query + 1);
-          }
-        }}
-      >
-        Next
+          </div>
+          <div className="nextButton">
+            <button
+              type="text"
+              value={query}
+              onClick={event => {
+                if (query < 9) {
+                  setQuery(query + 1);
+                }
+              }}
+            >
+              Next
       </button>
+          </div>
         </div>
-      </div>
-        </div>)}
+      </div>)}
     </>
   );
 }

@@ -10,8 +10,8 @@ export default function DisplayPlanet({
 
     return (
         <div className="display-card container">
-            <div class="meta">
-                <div class="photo">
+            <div className="meta">
+                <div className="photo">
 
                 </div>
             </div>

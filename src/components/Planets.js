@@ -8,15 +8,21 @@ export default function Planets() {
     const [data, setData] = useState([]);
     const [planets, setPlanets] = useState([]);
     const [query, setQuery] = useState(1);
+    const [isError, setIsError] = useState(false)
 
     useEffect(() => {
         const fetchData = async () => {
+            setIsError(false)
             setIsLoading(true)
+            try{
             const res = await axios.get(
                 `https://swapi.dev/api/planets/?page=${query}`
             );
             setData(res.data);
             setPlanets(res.data.results);
+            }catch(error){
+                setIsError(true)
+            }
             setIsLoading(false)
         };
         fetchData();
@@ -39,6 +45,9 @@ export default function Planets() {
     return (
         <>
             <Search search={search} />
+            {isError && <div className="alert alert-danger" role="alert">
+                The Repulic Won Check Your Connection and <a href="#" className="alert-link">Refresh</a>. To Rebel
+</div>}
             {isloading ? (
                 <div className="search">
                     <span className="Spinner Spinner--radar"></span>
