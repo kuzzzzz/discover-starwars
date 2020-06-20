@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-.planet-card{
+.display-card{
 display: flex;
 flex-direction: column;
 margin: 1rem auto;
@@ -18,7 +18,7 @@ margin-bottom: 1.6%;
   overflow: hidden;
   z-index: 0;
 }
-.planet-card button {
+.display-card button {
     color: rgb(5, 5, 39);
       font-family: starjhol;
 
@@ -31,20 +31,20 @@ div .photo{
   margin-bottom: 10px;
     
 }
-.planet-card .description .readmore button:hover{
+.display-card .description .readmore button:hover{
     color: rgb(143, 25, 25);
      transform: skew(2deg);
 }
 .photo:hover {
     transform: scale(1.1);
 }
-.planet-card .meta{
+.display-card .meta{
     //come back to this
     position: relative;
     z-index: 0;
     height: 200px;
 }
-.planet-card .photo{
+.display-card .photo{
     position: absolute;
   top: 0;
   right: 0;
@@ -54,25 +54,25 @@ div .photo{
   background-position: center;
   transition: transform 0.2s;
 }
-.planet-card .description{
+.display-card .description{
     padding: 1rem;
   background: rgb(12, 1, 1);
   position: relative;
   z-index: 1;
 
 }
-.planet-card .description h1{
+.display-card .description h1{
      line-height: 1;
   margin: 0;
   font-size: 1.7rem;
 }
-.planet-card .description .readmore  {
+.display-card .description .readmore  {
     text-align: right;
     font-size: 1rem;
         letter-spacing: 1.5px;
 
 }
-.planet-card .description .readmore button {
+.display-card .description .readmore button {
      color: #000000;
   display: inline-block;
   position: relative;
@@ -80,3 +80,5 @@ div .photo{
       font-family: starwars;
     text-decoration: none;
 }
+
+

@@ -6,7 +6,7 @@ import DisplayPerson from './DisplayPerson';
 import "../App.scss";
 
 function People() {
-  const [loading, setLoading] = useState(true);
+  const [isloading, setIsLoading] = useState(false);
   const filterd = useRef([])
   const [data, setData] = useState([]);
   const [people, setPeople] = useState([]);
@@ -14,11 +14,15 @@ function People() {
 
   useEffect(() => {
     const fetchData = async () => {
+      setIsLoading(true)
+
       const res = await axios.get(
         `https://swapi.dev/api/people/?page=${query}`
       );
       setData(res.data);
       setPeople(res.data.results);
+      setIsLoading(false)
+
     };
     fetchData();
   }, [query]);
@@ -27,10 +31,14 @@ function People() {
 
 
   const search = searchValue => {
-    setLoading(true)
+    setIsLoading(true)
     fetch(`https://swapi.dev/api/people/?search=${searchValue}`)
       .then(res => res.json())
-      .then(data => setPeople(data.results))
+      .then(data => {
+        setPeople(data.results)
+        setIsLoading(false)
+
+      })
   }
 
   const fileter = filterValue => {
@@ -50,7 +58,11 @@ function People() {
 
       <Search search={search} />
       <Filter fileter={fileter} />
-      
+      {isloading ? (
+        <div className="search">
+          <span className="Spinner Spinner--radar"></span>
+        </div>
+      ):(<div>
         {people.map(item => (
           <DisplayPerson
             key={item.name}
@@ -93,6 +105,7 @@ function People() {
       </button>
         </div>
       </div>
+        </div>)}
     </>
   );
 }

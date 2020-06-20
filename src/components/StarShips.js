@@ -2,10 +2,11 @@ import React, {useEffect,useState}from 'react'
 import axios from 'axios'
 import Search from './Search';
 import DisplayStarShip from './DisplayStarShip'
+import '../styles/spinner.scss'
 
 
 export default function StarShips() {
-    const [loading,setLoading] = useState(true)
+    const [Isloading,setIsLoading] = useState(false)
     const [data, setData] = useState([]);
     const [starhips, setShips] = useState([]);
     const [query, setQuery] = useState(1);
@@ -13,11 +14,13 @@ export default function StarShips() {
     // console.log(data)
     useEffect(() => {
         const fetchData = async () => {
+            setIsLoading(true)
             const res = await axios.get(
                 `https://swapi.dev/api/starships/?page=${query}`
             );
             setData(res.data);
             setShips(res.data.results);
+            setIsLoading(false)
         };
         fetchData();
     }, [query]);
@@ -27,16 +30,25 @@ export default function StarShips() {
 
 
     const search = searchValue => {
-        setLoading(true)
+        setIsLoading(true)
         fetch(`https://swapi.dev/api/starships/?search=${searchValue}`)
             .then(res => res.json())
-            .then(data => setShips(data.results))
+            .then(data =>{
+
+            setShips(data.results)
+            setIsLoading(false)
+        })
     }
 
     return (
         <>
 <Search search={search}/>
-            <ul>
+            
+            {Isloading ? (
+            <div className="search">
+                <span className="Spinner Spinner--radar"></span>
+            </div>
+            ):(<div>
                 {starhips.map(item => (
                     <DisplayStarShip
                      key={item.name}
@@ -50,7 +62,7 @@ export default function StarShips() {
                      films={item.films.length}
                     />
                 ))}
-            </ul>
+            
             <button
                 type="text"
                 value={query}
@@ -73,6 +85,7 @@ export default function StarShips() {
             >
                 Next
       </button>
+                </div>)}
         </>
     )
 }

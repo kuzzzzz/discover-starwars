@@ -12,21 +12,27 @@ export default function DisplayCard({
 
     return (
 
-        <div className="contact-card">
-            <div >
-                <p>Name:{name}</p>
+        <div className="display-card container">
+            <div className="meta">
+                <div className="photo person">
+
+                </div>
+            </div>
+            <div className="description" >
+                <h1>Name:{name}</h1>
                 <p>Birth-Year:{birth_year}</p>
                 <p>Gender:{gender}</p>
-
+                <div className="readmore">
+                    <button onClick={() => setDetails(!fulldetails)} >full-details</button>
+                    {fulldetails && <p>
+                        Eye-color:{eye_color}<br />
+                        Mass:{mass}<br />
+                        Skin:{skin_color}<br />
+                        No of Movies Seen:{films}<br />
+                        Hair-Color:{hair_color}<br />
+                        Height:{height}</p>}
+                </div>
             </div>
-            <button onClick={() => setDetails(!fulldetails)} >full-details</button>
-            {fulldetails && <div><p>
-                Eye-color:{eye_color}<br/>
-                Mass:{mass}<br />
-                Skin:{skin_color}<br />
-                No of Movies Seen:{films}<br />
-                Hair-Color:{hair_color}<br />
-                Height:{height}</p></div>}
 
         </div>
 

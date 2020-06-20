@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import "../styles/planetcard.scss"
+import "../styles/Displaycard.scss"
 import "../App.scss"
 
 export default function DisplayPlanet({
@@ -9,9 +9,7 @@ export default function DisplayPlanet({
     const [planetdetails, setDetails] = useState(false)
 
     return (
-
-
-        <div className="planet-card container">
+        <div className="display-card container">
             <div class="meta">
                 <div class="photo">
 
