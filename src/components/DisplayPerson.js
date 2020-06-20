@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import "../App.scss"
 import "../styles/card.scss"
+import Background from '../assets/img/character-3.jpg';
 
 
 export default function DisplayCard({
@@ -14,7 +15,8 @@ export default function DisplayCard({
 
         <div className="display-card container">
             <div className="meta">
-                <div className="photo person">
+                <div className="photo"
+                style={{backgroundImage:`url(${Background})`}}>
 
                 </div>
             </div>

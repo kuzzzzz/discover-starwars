@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import '../App.scss'
+import Background from "../assets/img/starship-6.jpg"
 export default function DisplayStarShip({
     name, manufacturer, cost_in_credits, cargo_capacity,
     hyperdrive_rating, crew, passengers, films
@@ -10,7 +11,9 @@ export default function DisplayStarShip({
     return (
         <div className="display-card container">
             <div className="meta">
-                <div className="photo">
+                <div className="photo"
+                    style={{ backgroundImage: `url(${Background})` }}>
+
 
                 </div>
             </div>
