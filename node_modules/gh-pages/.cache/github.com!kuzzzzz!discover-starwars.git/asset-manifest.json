@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/discover-starwars/static/css/main.88a63092.chunk.css",
+    "main.js": "/discover-starwars/static/js/main.0d95ffb0.chunk.js",
+    "main.js.map": "/discover-starwars/static/js/main.0d95ffb0.chunk.js.map",
+    "runtime-main.js": "/discover-starwars/static/js/runtime-main.db15345e.js",
+    "runtime-main.js.map": "/discover-starwars/static/js/runtime-main.db15345e.js.map",
+    "static/css/2.829c9cb5.chunk.css": "/discover-starwars/static/css/2.829c9cb5.chunk.css",
+    "static/js/2.5f294525.chunk.js": "/discover-starwars/static/js/2.5f294525.chunk.js",
+    "static/js/2.5f294525.chunk.js.map": "/discover-starwars/static/js/2.5f294525.chunk.js.map",
+    "index.html": "/discover-starwars/index.html",
+    "precache-manifest.afb24bca6a73a0020248a65c3c5783ff.js": "/discover-starwars/precache-manifest.afb24bca6a73a0020248a65c3c5783ff.js",
+    "service-worker.js": "/discover-starwars/service-worker.js",
+    "static/css/2.829c9cb5.chunk.css.map": "/discover-starwars/static/css/2.829c9cb5.chunk.css.map",
+    "static/css/main.88a63092.chunk.css.map": "/discover-starwars/static/css/main.88a63092.chunk.css.map",
+    "static/js/2.5f294525.chunk.js.LICENSE.txt": "/discover-starwars/static/js/2.5f294525.chunk.js.LICENSE.txt",
+    "static/media/Displaycard.scss": "/discover-starwars/static/media/planet-1.08506399.jpg",
+    "static/media/character-3.jpg": "/discover-starwars/static/media/character-3.1c623f72.jpg",
+    "static/media/index.scss": "/discover-starwars/static/media/hero-banner.dd4c8beb.jpg",
+    "static/media/starship-6.jpg": "/discover-starwars/static/media/starship-6.340c3a01.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.db15345e.js",
+    "static/css/2.829c9cb5.chunk.css",
+    "static/js/2.5f294525.chunk.js",
+    "static/css/main.88a63092.chunk.css",
+    "static/js/main.0d95ffb0.chunk.js"
+  ]
+}
