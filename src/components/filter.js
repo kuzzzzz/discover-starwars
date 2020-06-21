@@ -31,7 +31,7 @@ export default function Filter(props) {
                     <option value="hermaphrodite">Hemaphrodite</option>
 
                 </select>
-                <input onClick={callFilterFunction} type="submit" value="Filter" />
+            <input onClick={callFilterFunction} className="btn btn-primary " type="submit" value="Filter" />
 
             </form>
         

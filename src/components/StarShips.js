@@ -4,6 +4,7 @@ import Search from './Search';
 import DisplayStarShip from './DisplayStarShip'
 import '../styles/spinner.scss';
 import { Link } from 'react-router-dom';
+import Planets from './Planets';
 
 export default function StarShips() {
     const [Isloading, setIsLoading] = useState(false)
@@ -55,9 +56,11 @@ export default function StarShips() {
                     <span className="Spinner Spinner--radar"></span>
                 </div>
             ) : (<div>
-                <h1>Showing List 10 out of {data.count}</h1>
-
-                {starhips.map(item => (
+                <h1>Showing List {starhips.length} out of {data.count}</h1>
+{starhips.length === 0 && isError ===false ? (
+                        <div className="alert alert-danger" role="alert">
+                            There are no Starship With that Name <Link to='/' className="alert-link">Refresh and </Link> enter a valid name Ex:star destroyer
+</div>):(starhips.map(item => (
                     <DisplayStarShip
                         key={item.name}
                         name={item.name}
@@ -68,7 +71,7 @@ export default function StarShips() {
                         crew={item.crew}
                         passengers={item.passengers}
                         films={item.films.length}
-                    />
+                    />)
                 ))}
                 <div className="button">
                     <div className="previousButton">

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import People from "./components/People";
 import Planets from "./components/Planets";
 import StarShips from './components/StarShips';
@@ -17,17 +17,17 @@ function App() {
   return (
     <>
       <Router>
-        <div className="topnav navbar sticky-top">
+        <div className="topnav navbar fixed-top">
           <div className="Logo">
             discover
          <Link to='/'>
-              <img src={logo}></img>
+              <img src={logo} alt=''></img>
             </Link>
           </div>
           <div className="nav">
-         <Link to="/">People</Link>
-            <Link to="/planets">Planets</Link>
-            <Link to="/starships">StarShips</Link>
+            <Link to="/" className="btn btn-sm btn-outline-primary">People</Link>
+            <Link to="/planets" className="btn btn-sm btn-outline-primary">Planets</Link>
+            <Link to="/starships" className="btn btn-xm btn-outline-primary">StarShips</Link>
           
 
 
@@ -48,7 +48,10 @@ function App() {
 
         </Switch>
       </Router>
-    </>
+      <nav className="navbar footer navbar-light bg-dark">
+        <a className="navbar-brand" href="#">May the 4th Be with You ❤️ kuzzzzz</a>
+      </nav>   
+       </>
   );
 }
 

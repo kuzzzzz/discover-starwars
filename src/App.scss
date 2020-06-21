@@ -6,6 +6,15 @@
   font-family: starjhol;
   src:url(./assets/fonts/Starjhol.ttf)
 }
+.footer{
+   position: relative;
+   top: 20px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+
+  font-family: starwars;
+}
 .topnav{
   background:black;
   display: flex;
@@ -17,11 +26,12 @@ div .Logo {
      text-align: center;
   letter-spacing: 2px;
 
-  width: 120px;
-  height: 90px;
-    /* border: 2px solid; */
-  color:yellow;
+  width: 220px;
+  height: 110px;
+     border-top: 2px solid; 
+          border-bottom: 2px solid; 
 
+  color:yellow;
    }
 .nav{
   display: flex;

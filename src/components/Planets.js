@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios'
 import Search from './Search'
 import DisplayPlanet from './DisplayPlanet'
+import { Link } from 'react-router-dom';
 
 export default function Planets() {
     const [isloading, setIsLoading] = useState(false)
@@ -46,15 +47,20 @@ export default function Planets() {
         <>
             <Search search={search} />
             {isError && <div className="alert alert-danger" role="alert">
-                The Repulic Won Check Your Connection and <a href="#" className="alert-link">Refresh</a>. To Rebel
+                The Repulic Won Check Your Connection and <Link to="/" className="alert-link">Refresh</Link>. To Rebel
 </div>}
             {isloading ? (
                 <div className="search">
                     <span className="Spinner Spinner--radar"></span>
                 </div>
             ) : (<div>
-                <h1>Showing List 10 out of {data.count}</h1>
-                {planets.map(item => (
+                <h1>Showing List {planets.length} out of {data.count}</h1>
+                {planets.length === 0 && isError ===false ? (
+                        <div className="alert alert-danger" role="alert">
+          There are no Planets With that Name <Link to='/' className="alert-link">Refresh and </Link> enter a valid name Ex:Hoth
+</div>
+                ) :(
+                planets.map(item => (
                     <DisplayPlanet
                         key={item.name}
                         name={item.name}
@@ -65,7 +71,7 @@ export default function Planets() {
                         terrain={item.terrain}
                         orbital_period={item.orbital_period}
                         films={item.films.length}
-                    />
+                    />)
                 ))}
                 <div className="button">
                     <div className="previousButton">

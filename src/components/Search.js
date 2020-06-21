@@ -24,7 +24,7 @@ const [searchValue, setSearchValue] = useState('');
                 type="text"
                 
                 />
-                <input onClick={callSearchFunction} type="submit" value="search"/>
+            <input onClick={callSearchFunction} className="btn btn-primary" type="submit" value="search"/>
             </form>
         
     )

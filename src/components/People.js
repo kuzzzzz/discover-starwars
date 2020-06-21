@@ -4,6 +4,7 @@ import Search from './Search';
 import Filter from './filter';
 import DisplayPerson from './DisplayPerson';
 import "../App.scss";
+import { Link } from "react-router-dom"
 
 function People() {
   const [isloading, setIsLoading] = useState(false);
@@ -39,9 +40,9 @@ function People() {
     fetch(`https://swapi.dev/api/people/?search=${searchValue}`)
       .then(res => res.json())
       .then(data => {
+        console.log(data)
         setPeople(data.results)
         setIsLoading(false)
-
       })
   }
 
@@ -63,33 +64,36 @@ function People() {
       <Search search={search} />
       <Filter fileter={fileter} />
       {isError && <div className="alert alert-danger" role="alert">
-        The Repulic Won Check Your Connection and <a href="#" className="alert-link">Refresh</a>. To Rebel
+        The Repulic Won Check Your Connection and
+        <Link to='/' className="alert-link"> Refresh </Link>.To Rebel
 </div>}
       {isloading ? (
         <div className="search">
           <span className="Spinner Spinner--radar"></span>
         </div>
       ) : (<div>
-          <h1>Showing List 10 out of {data.count}</h1>
+        <h1>Showing List of {people.length} out of {data.count}</h1>
 
-        {people.map(item => (
-          <DisplayPerson
-            key={item.name}
-            name={item.name}
-            birth_year={item.birth_year}
-            gender={item.gender}
-            eye_color={item.eye_color}
-            hair_color={item.hair_color}
-            skin_color={item.skin_color}
-            mass={item.mass}
-            films={item.films.length}
-            height={item.height}
-          />
-        ))}
+        {people.length === 0 && isError===false ? (<div className="alert alert-danger" role="alert">
+          There are no Rebels With that Name <Link to='/' className="alert-link">Refresh and </Link> enter a valid name Ex:luke
+</div>) : (people.map(item => (
+            <DisplayPerson
+              key={item.name}
+              name={item.name}
+              birth_year={item.birth_year}
+              gender={item.gender}
+              eye_color={item.eye_color}
+              hair_color={item.hair_color}
+              skin_color={item.skin_color}
+              mass={item.mass}
+              films={item.films.length}
+              height={item.height}
+            />)
+          ))}
         <div className="button">
           <div className="previousButton">
             <button
-                className="btn btn-primary btn-lg"
+              className="btn btn-primary btn-lg"
               type="text"
               value={query}
               onClick={event => {
@@ -103,7 +107,7 @@ function People() {
           </div>
           <div className="nextButton">
             <button
-                className="btn btn-primary btn-lg"
+              className="btn btn-primary btn-lg"
               type="text"
               value={query}
               onClick={event => {
