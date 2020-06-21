@@ -49,7 +49,7 @@ function App() {
         </Switch>
       </Router>
       <nav className="navbar footer navbar-light bg-dark">
-        <a className="navbar-brand" href="#">May the 4th Be with You ❤️ kuzzzzz</a>
+        <a className="navbar-brand" href="#">May the 4th Be with You <span role="img" aria-label="">❤️</span> kuzzzzz</a>
       </nav>   
        </>
   );

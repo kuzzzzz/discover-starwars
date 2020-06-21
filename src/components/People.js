@@ -22,17 +22,16 @@ function People() {
         const res = await axios.get(
           `https://swapi.dev/api/people/?page=${query}`
         );
-        setData(res.data);
-        setPeople(res.data.results);
-      } catch (error) {
+        setData(res.data)
+        setPeople(res.data.results)
+      }
+      catch (error) {
         setIsError(true)
       }
       setIsLoading(false)
-
-    };
-    fetchData();
+    }
+    fetchData()
   }, [query]);
-  // https://swapi.dev/api/people/?search=r2
 
 
   const search = searchValue => {
@@ -52,75 +51,69 @@ function People() {
       if (item.gender === filterValue) {
         men.push(item)
       }
+      return men
     })
     filterd.current = men
     setPeople(filterd.current)
-    // console.log(filterd)
   }
 
   return (
     <>
-
       <Search search={search} />
       <Filter fileter={fileter} />
+
       {isError && <div className="alert alert-danger" role="alert">
         The Repulic Won Check Your Connection and
-        <Link to='/' className="alert-link"> Refresh </Link>.To Rebel
-</div>}
+        <Link to='/' className="alert-link"> Refresh </Link>.To Rebel </div>}
+
       {isloading ? (
         <div className="search">
           <span className="Spinner Spinner--radar"></span>
         </div>
-      ) : (<div>
-        <h1>Showing List of {people.length} out of {data.count}</h1>
+      ) : (
+          
+          <div className="container">
 
-        {people.length === 0 && isError===false ? (<div className="alert alert-danger" role="alert">
-          There are no Rebels With that Name <Link to='/' className="alert-link">Refresh and </Link> enter a valid name Ex:luke
-</div>) : (people.map(item => (
-            <DisplayPerson
-              key={item.name}
-              name={item.name}
-              birth_year={item.birth_year}
-              gender={item.gender}
-              eye_color={item.eye_color}
-              hair_color={item.hair_color}
-              skin_color={item.skin_color}
-              mass={item.mass}
-              films={item.films.length}
-              height={item.height}
-            />)
-          ))}
-        <div className="button">
-          <div className="previousButton">
-            <button
-              className="btn btn-primary btn-lg"
-              type="text"
-              value={query}
-              onClick={event => {
-                if (query > 1) {
-                  setQuery(query - 1);
-                }
-              }}
-            >
-              Previous
-      </button>
+            <p >Showing List of {people.length} out of {data.count}</p>
+            {people.length === 0 && isError === false ? 
+            (<div className="alert alert-danger" role="alert">
+              There are no Rebels With that Name Check Your 
+              Connection and Refresh Ex:luke</div>) :
+               (people.map(item => (
+                <DisplayPerson
+                  key={item.name}
+                  name={item.name}
+                  birth_year={item.birth_year}
+                  gender={item.gender}
+                  eye_color={item.eye_color}
+                  hair_color={item.hair_color}
+                  skin_color={item.skin_color}
+                  mass={item.mass}
+                  films={item.films.length}
+                  height={item.height}
+                />)
+              ))}
+
+            <div className="button">
+                <div className="previousButton">
+                <button
+                  className="btn btn-primary btn-lg"
+                  type="text"
+                  value={query}
+                  onClick={event => {if (query > 1) {setQuery(query - 1);}}} >
+                  Previous </button></div>
+
+              <div className="nextButton">
+                <button
+                  className="btn btn-primary btn-lg"
+                  type="text"
+                  value={query}
+                  onClick={event => { if (query < 9) {  setQuery(query + 1);  }}}>
+                  Next </button></div>
+            </div>
+
           </div>
-          <div className="nextButton">
-            <button
-              className="btn btn-primary btn-lg"
-              type="text"
-              value={query}
-              onClick={event => {
-                if (query < 9) {
-                  setQuery(query + 1);
-                }
-              }}
-            >
-              Next
-      </button>
-          </div>
-        </div>
-      </div>)}
+          )}
     </>
   );
 }

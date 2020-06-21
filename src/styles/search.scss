@@ -2,15 +2,13 @@
 
 $layout-breakpoint-small:768px;
 
-
-
 .search {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 10px;
-  font-family: starwars;
+  font-family: starwars,'Krona One', sans-serif;
   letter-spacing: 2px;
 }
 

@@ -7,13 +7,12 @@
   src:url(./assets/fonts/Starjhol.ttf)
 }
 .footer{
-   position: relative;
-   top: 20px;
+  position: relative;
+  top: 20px;
   left: 0;
   bottom: 0;
   width: 100%;
-
-  font-family: starwars;
+  font-family: starjhol,'Krona One', sans-serif;
 }
 .topnav{
   background:black;
@@ -22,25 +21,21 @@
   align-items: center;
 }
 div .Logo {
-     font-family: starjhol;
-     text-align: center;
+  font-family: starjhol,'Krona One', sans-serif;
+  text-align: center;
   letter-spacing: 2px;
-
   width: 220px;
   height: 110px;
-     border-top: 2px solid; 
-          border-bottom: 2px solid; 
-
+  border-top: 2px solid; 
+  border-bottom: 2px solid; 
   color:yellow;
    }
-.nav{
+.nav {
   display: flex;
-      flex-direction: column;
-
-font-family: starjhol;
+  flex-direction: column;
+  font-family: starjhol,'Krona One', sans-serif;
   letter-spacing: 2px;
-
-color: yellow;
+  color: yellow;
 }
 .nav a {
   font-size: 20px;
@@ -49,7 +44,9 @@ color: yellow;
 a:link{
   color: blue;
 }
-
+p .container{
+  font-size: 1rem;
+}
 a:hover{
   text-decoration: none;
   color: yellow;
@@ -57,44 +54,42 @@ a:hover{
 a:active{
   color: yellow;
 }
-   .Logo img {
-     width: 220px;
-     height: 80px;
+.Logo img {
+  width: 220px;
+  height: 80px;
+  }
+div .button{
+  display: flex;
+  justify-content: space-around;
+  }
+.previousButton button{
+  font-family: starwars,'Krona One', sans-serif;
+  border: none;
+  background: rgb(41, 16, 1);
+  color:rgb(255, 255, 255);
+  padding: 10px;
    }
-   div .button{
-     display: flex;
-     justify-content: space-around;
-    
+.nextButton button {
+  font-family: starwars,'Krona One', sans-serif;
+  letter-spacing: 2px;
+  border: none;
+  background: rgb(41, 16, 1);
+  padding: 10px;
    }
-   .previousButton button{
-     font-family: starwars;
-border: none;
+.nextButton button:hover,.previousButton button:hover{
+  color: black;
+  background: yellow;
+   }
+  
+//desktop view and tab
 
-     background: rgb(41, 16, 1);
-     color:rgb(255, 255, 255);
-     padding: 10px;
-   }
-   .nextButton button {
-     font-family: starwars;
-     letter-spacing: 2px;
-border: none;
-     background: rgb(41, 16, 1);
-          padding: 10px;
-
-   }
-   .nextButton button:hover,.previousButton button:hover{
-     color: black;
-     background: yellow;
-   }
-  @media screen and (min-width: 780px) {
+@media screen and (min-width: 780px) {
   .nav  {
-         flex-direction: row;
-
-  font-size: 20px;
-  margin: 20px;
-   a{
-margin:10px;
-  }
+      flex-direction: row;
+      font-size: 20px;
+      margin: 20px;
+        a{
+            margin:10px;
+          }
+        }
 }
-
-  }
