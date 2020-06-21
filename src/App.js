@@ -13,6 +13,20 @@ import {
 
 function App() {
 
+const toggIcon = {
+  marginTop:"10px",
+ fontSize:"10px",
+}
+const toggleClassList = () =>{
+  let shownav = document.querySelector('.nav');
+  if(shownav.style.display==="none"){
+    shownav.style.display="block"
+  }else{
+    shownav.style.display="none"
+  }
+  document.querySelector("#nav-container").classList.toggle("pushed")
+
+}
  
   return (
     <>
@@ -24,16 +38,21 @@ function App() {
               <img src={logo} alt=''></img>
             </Link>
           </div>
-          <div className="nav">
+            <div style={toggIcon} id="nav-container">
+              <div onClick={toggleClassList} className="toggle-icon">
+                <span className="bar"></span>
+                <span className="bar"></span>
+                <span className="bar"></span>
+              </div>
+          </div>        
+            <div className="nav">
+           
             <Link to="/" className="btn btn-sm btn-outline-primary">People</Link>
             <Link to="/planets" className="btn btn-sm btn-outline-primary">Planets</Link>
-            <Link to="/starships" className="btn btn-xm btn-outline-primary">StarShips</Link>
-          
-
-
-          </div>
+            <Link to="/starships" className="btn btn-sm btn-outline-primary">StarShips</Link>
+        
+            </div>
         </div>
-
 
         <Switch>
           <Route path="/starships">
@@ -48,9 +67,9 @@ function App() {
 
         </Switch>
       </Router>
-      <nav className="navbar footer navbar-light bg-dark">
-        <a className="navbar-brand" href="#">May the 4th Be with You <span role="img" aria-label="">❤️</span> kuzzzzz</a>
-      </nav>   
+      <div style={{background:"lightgrey",fontSize:"0.8rem",textAlign:"center",margin:'30px'}} >
+        <p> May the 4th Be with You <span role="img" aria-label="">❤️</span> kuzzzzz</p>
+      </div>   
        </>
   );
 }

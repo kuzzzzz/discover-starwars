@@ -17,7 +17,7 @@ export default function Filter(props) {
     }
     return (
 
-        <form className="search">
+        <form >
             <select name="gender" id="gender" onChange={handlefilterInput} >
                 <option defaultValue="">filter List</option>
                 <option value="male"> Male</option>

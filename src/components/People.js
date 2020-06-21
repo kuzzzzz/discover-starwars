@@ -59,15 +59,16 @@ function People() {
 
   return (
     <>
-      <Search search={search} />
-      <Filter fileter={fileter} />
-
+    <div>
+      <Search className="search" search={search} />
+      <Filter className="filter" fileter={fileter} />
+      </div>
       {isError && <div className="alert alert-danger" role="alert">
         The Repulic Won Check Your Connection and
         <Link to='/' className="alert-link"> Refresh </Link>.To Rebel </div>}
 
       {isloading ? (
-        <div className="search">
+        <div className="Spinner-wrapper">
           <span className="Spinner Spinner--radar"></span>
         </div>
       ) : (
