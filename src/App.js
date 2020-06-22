@@ -21,6 +21,7 @@ const toggleClassList = () =>{
   let shownav = document.querySelector('.nav');
   if(shownav.style.display==="none"){
     shownav.style.display="block"
+    shownav.style.textAlign="center"
   }else{
     shownav.style.display="none"
   }

@@ -50,7 +50,7 @@ export default function StarShips() {
                  To Rebel </div>}
 
             {Isloading ? (
-                <div className="search">
+                <div className="Spinner-wrapper">
                     <span className="Spinner Spinner--radar"></span>
                 </div>) :
                 (<div className="container">

@@ -51,7 +51,7 @@ export default function Planets() {
                  To Rebel</div>}
 
             {isloading ? (
-                <div className="search">
+                <div className="Spinner-wrapper">
                     <span className="Spinner Spinner--radar"></span>
                 </div>) :
                 (<div className="container">
