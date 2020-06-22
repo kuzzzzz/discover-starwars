@@ -47,7 +47,7 @@ export default function Planets() {
 
             {isError && <div className="alert alert-danger" role="alert">
                 The Repulic Won Check Your Connection and
-                <Link to="/" className="alert-link">Refresh</Link>.
+                <Link to="/" className="alert-link"> Click Here  </Link>.
                  To Rebel</div>}
 
             {isloading ? (
@@ -59,8 +59,8 @@ export default function Planets() {
                     {planets.length === 0 && isError === false ? (
                         <div className="alert alert-danger" role="alert">
                             There are no Planets With that Name
-                         <Link to='/' className="alert-link">Refresh and </Link>
-                            enter a valid name Ex:Hoth</div>) : (
+                             Please enter a valid name 'ex:Hoth or Tatooine' 
+                             </div>) : (
                             planets.map(item => (
                                 <DisplayPlanet
                                     key={item.name}

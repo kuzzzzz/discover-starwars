@@ -46,7 +46,7 @@ export default function StarShips() {
 
             {IsError && <div className="alert alert-danger" role="alert">
                 The Repulic Won Check Your Connection and
-                <Link to='/' className="alert-link">Refresh</Link>.
+                <Link to='/' className="alert-link"> Click Here </Link>.
                  To Rebel </div>}
 
             {Isloading ? (
@@ -57,9 +57,9 @@ export default function StarShips() {
                     <p >Showing List {starhips.length} out of {data.count}</p>
                     {starhips.length === 0 && IsError === false ? (
                         <div className="alert alert-danger" role="alert">
-                            There are no Starship With that Name
-                        <Link to='/' className="alert-link">Refresh</Link>
-                            or enter a valid name "Ex:star destroyer"</div>) :
+                            There are no Starships With that Name
+                            Please enter a valid name "Ex:star destroyer"
+                            </div>) :
                         (starhips.map(item => (
                             <DisplayStarShip
                                 key={item.name}

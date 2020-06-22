@@ -4,10 +4,10 @@ A simple React App That lets you view details of the various characters,planets 
 [SWAPI](https://swapi.dev/api/)
 
 
-###Site Layout
+### Site Layout
 app uses bootstrap and some custom css for layout
 
-##Functionalities 
+## Functionalities 
 - User can view a list of people (humans & robots), list item contains full name, birth year and gender
 - User can view a list of planets, list item contains name, temperature and population.
 - User can view a list of starships, list item contains name, model and cargo capacity.
@@ -20,7 +20,7 @@ app uses bootstrap and some custom css for layout
 
  run app locally by cloning the repo and running 
 
-## `cd` Into the project directory, and then 
+ #### Cd Into the project directory, and then 
 
 ### `npm install`
 
@@ -28,14 +28,18 @@ app uses bootstrap and some custom css for layout
 
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-or view hosted version [Here](https://kuzzzzz.github.io/discover-starwars/)
+## Or view hosted version [Here](https://kuzzzzz.github.io/discover-starwars/)
 
-##screen shoots
+## Screen shoots
 
-Main page Mobile view: ![Alt](./screenshots/img/mobile-view.png)
+### Main page Mobile view:
+ ![Alt](./screenshots/img/mobile-view.png)
 
-Main page Desktop view: ![Alt](./screenshots/img/main-page.png)
+### Main page Desktop view: 
+![Alt](./screenshots/img/main-page.png)
 
-search Result View: ![Alt](./screenshots/img/search-result.png)
+### search Result View:
+ ![Alt](./screenshots/img/search-result.png)
 
-Filter Result View: ![Alt](./screenshots/img/filter-results.png)
+### Filter Result View: 
+![Alt](./screenshots/img/filter-results.png)

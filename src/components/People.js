@@ -65,7 +65,7 @@ function People() {
       </div>
       {isError && <div className="alert alert-danger" role="alert">
         The Repulic Won Check Your Connection and
-        <Link to='/' className="alert-link"> Refresh </Link>.To Rebel </div>}
+        <Link to='/' className="alert-link"> Click </Link>.To Rebel </div>}
 
       {isloading ? (
         <div className="Spinner-wrapper">
@@ -75,11 +75,11 @@ function People() {
           
           <div className="container">
 
-            <p >Showing List of {people.length} out of {data.count}</p>
+            <p> Showing List of {people.length} out of {data.count}</p>
             {people.length === 0 && isError === false ? 
             (<div className="alert alert-danger" role="alert">
-              There are no Rebels With that Name Check Your 
-              Connection and Refresh Ex:luke</div>) :
+              There are no Rebels With that Name 
+              Please enter a Valid Name Ex:luke</div>) :
                (people.map(item => (
                 <DisplayPerson
                   key={item.name}
