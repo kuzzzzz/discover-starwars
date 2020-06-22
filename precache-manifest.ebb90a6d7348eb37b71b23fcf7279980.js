@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b8b2c766a5d65617c332bc040adacfd8",
+    "revision": "fc036b575dc3021a263710acb5b27d7c",
     "url": "/discover-starwars/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/discover-starwars/static/css/2.829c9cb5.chunk.css"
   },
   {
-    "revision": "5f55f5441b0c9b5bd2e7",
-    "url": "/discover-starwars/static/css/main.0d66db97.chunk.css"
+    "revision": "e0d08e6b1f67167d530f",
+    "url": "/discover-starwars/static/css/main.4319c5bf.chunk.css"
   },
   {
     "revision": "443f096ab63efe062ef2",
@@ -20,7 +20,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/discover-starwars/static/js/2.0a864325.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "5f55f5441b0c9b5bd2e7",
+    "revision": "e0d08e6b1f67167d530f",
     "url": "/discover-starwars/static/js/main.d16bea36.chunk.js"
   },
   {
@@ -40,8 +40,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/discover-starwars/static/media/character-3.1c623f72.jpg"
   },
   {
-    "revision": "dd4c8bebf90b82f0fb4d072e97d9c9d8",
-    "url": "/discover-starwars/static/media/hero-banner.dd4c8beb.jpg"
+    "revision": "bff19152f1272b8f4e41236f5970ee6c",
+    "url": "/discover-starwars/static/media/hero-banner.bff19152.jpg"
   },
   {
     "revision": "08506399a9f5c2279314aa8c9814bda5",
