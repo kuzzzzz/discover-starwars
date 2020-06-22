@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8018fa8d96b9d4044fee4e75b40d8069",
+    "revision": "b8b2c766a5d65617c332bc040adacfd8",
     "url": "/discover-starwars/index.html"
   },
   {
-    "revision": "99bd98c6c721c556c3e8",
+    "revision": "443f096ab63efe062ef2",
     "url": "/discover-starwars/static/css/2.829c9cb5.chunk.css"
   },
   {
-    "revision": "28310695cdd6e80a14cc",
+    "revision": "5f55f5441b0c9b5bd2e7",
     "url": "/discover-starwars/static/css/main.0d66db97.chunk.css"
   },
   {
-    "revision": "99bd98c6c721c556c3e8",
-    "url": "/discover-starwars/static/js/2.5f294525.chunk.js"
+    "revision": "443f096ab63efe062ef2",
+    "url": "/discover-starwars/static/js/2.0a864325.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/discover-starwars/static/js/2.5f294525.chunk.js.LICENSE.txt"
+    "url": "/discover-starwars/static/js/2.0a864325.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "28310695cdd6e80a14cc",
-    "url": "/discover-starwars/static/js/main.246abe22.chunk.js"
+    "revision": "5f55f5441b0c9b5bd2e7",
+    "url": "/discover-starwars/static/js/main.d16bea36.chunk.js"
   },
   {
     "revision": "48e6b78def53c7eeda90",

@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/discover-starwars/static/css/main.0d66db97.chunk.css",
-    "main.js": "/discover-starwars/static/js/main.246abe22.chunk.js",
-    "main.js.map": "/discover-starwars/static/js/main.246abe22.chunk.js.map",
+    "main.js": "/discover-starwars/static/js/main.d16bea36.chunk.js",
+    "main.js.map": "/discover-starwars/static/js/main.d16bea36.chunk.js.map",
     "runtime-main.js": "/discover-starwars/static/js/runtime-main.db15345e.js",
     "runtime-main.js.map": "/discover-starwars/static/js/runtime-main.db15345e.js.map",
     "static/css/2.829c9cb5.chunk.css": "/discover-starwars/static/css/2.829c9cb5.chunk.css",
-    "static/js/2.5f294525.chunk.js": "/discover-starwars/static/js/2.5f294525.chunk.js",
-    "static/js/2.5f294525.chunk.js.map": "/discover-starwars/static/js/2.5f294525.chunk.js.map",
+    "static/js/2.0a864325.chunk.js": "/discover-starwars/static/js/2.0a864325.chunk.js",
+    "static/js/2.0a864325.chunk.js.map": "/discover-starwars/static/js/2.0a864325.chunk.js.map",
     "index.html": "/discover-starwars/index.html",
-    "precache-manifest.7ce1d76059f82f4fb3fe2f617977fd14.js": "/discover-starwars/precache-manifest.7ce1d76059f82f4fb3fe2f617977fd14.js",
+    "precache-manifest.e273a48afec5aef802522bcc2e40a3fc.js": "/discover-starwars/precache-manifest.e273a48afec5aef802522bcc2e40a3fc.js",
     "service-worker.js": "/discover-starwars/service-worker.js",
     "static/css/2.829c9cb5.chunk.css.map": "/discover-starwars/static/css/2.829c9cb5.chunk.css.map",
     "static/css/main.0d66db97.chunk.css.map": "/discover-starwars/static/css/main.0d66db97.chunk.css.map",
-    "static/js/2.5f294525.chunk.js.LICENSE.txt": "/discover-starwars/static/js/2.5f294525.chunk.js.LICENSE.txt",
+    "static/js/2.0a864325.chunk.js.LICENSE.txt": "/discover-starwars/static/js/2.0a864325.chunk.js.LICENSE.txt",
     "static/media/Displaycard.scss": "/discover-starwars/static/media/planet-1.08506399.jpg",
     "static/media/character-3.jpg": "/discover-starwars/static/media/character-3.1c623f72.jpg",
     "static/media/index.scss": "/discover-starwars/static/media/hero-banner.dd4c8beb.jpg",
@@ -22,8 +22,8 @@
   "entrypoints": [
     "static/js/runtime-main.db15345e.js",
     "static/css/2.829c9cb5.chunk.css",
-    "static/js/2.5f294525.chunk.js",
+    "static/js/2.0a864325.chunk.js",
     "static/css/main.0d66db97.chunk.css",
-    "static/js/main.246abe22.chunk.js"
+    "static/js/main.d16bea36.chunk.js"
   ]
 }
